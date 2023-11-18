@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/login.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">   
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style2.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row align-items-center bg-light px-lg-5">
+            <div class="col-12 col-md-8">
+                <div class="d-flex justify-content-between">
+                    <div><a href="https://somos.dwggl.com/acerca"><img width="250px" src="img/ggl.jpg" ></a></div>
+                    <div class="owl-carousel owl-carousel-1 tranding-carousel position-relative d-inline-flex align-items-center ml-3" style="width: calc(100% - 100px); padding-right: 90px;">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 text-right d-none d-md-block">
+                <label id="fecha"></label>
+                <script>
+                    
+                    var hoy = new Date();
+ 
+                    var formato = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                    formato.timeZone = 'UTC';
+                    formato.timeZoneName = 'short';
+ 
+                    var hoy = hoy.toLocaleString('es-ES', formato);
+                    
+                    document.getElementById('fecha').innerHTML=hoy 
+
+                </script>
+                
+            </div>
+        </div>
+        <div class="row align-items-center py-2 px-lg-5">
+            <div class="col-lg-4">
+                <a href="" class="navbar-brand d-none d-lg-block">
+                    <h2 class="m-0 display-5 text-uppercase"><span class="text-primary"></span>Iniciar Sesion</h2>
+                </a>
+            </div>
+            <div class="col-lg-8 text-center text-lg-right">
+                
+            </div>
+        </div>
+    </div>
+    <div class="wrapper">
+        
+        <form class="login" name="form" action="noticias.html">
+          <p class="title">Iniciar</p>
+          <i class="fa fa-user"></i>
+          <input name="user" type="text" placeholder="Usuario"/>
+          <i class="fa fa-key"></i>
+          <input name="password" type="password" placeholder="Contraseña" />
+          
+          <button onclick=loggear()>
+            <i class="spinner"></i>
+            <span class="state">Iniciar</span>
+          </button>
+          
+        </form>
+        <script>
+            function loggear(){
+     
+                    
+                if (document.form.password.value=='prueba' && document.form.user.value=='carlos'){ 
+        document.form.submit(); 
+    } 
+                
+            
+            }
+                    </script>
+        
+            
+            
+        </p>
+      </div>
+    
+</body>
+</html>
